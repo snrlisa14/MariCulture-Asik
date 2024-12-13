@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edukasi</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <%- include('partials/navbar') %>
+    <div class="wrap-none p-4">
+      <div class="container-fluid">
+        <div
+          class="m-auto"
+          style="width: 100%; padding-bottom: 120px; margin-bottom: 30px"
+        >
+          <h1
+            class="text-align-center text-center text-white"
+            style="font-weight: 700; font-size: 30px; margin-bottom: 50px"
+          >
+            Informasi Terkait Edukasi
+          </h1>
+
+          <!-- Carousel Start -->
+          <div id="eduCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <% akuakultur.forEach((item, index) => { %>
+              <div class="carousel-item <%= index === 0 ? 'active' : '' %>">
+                <div class="row d-flex justify-content-center">
+                  <div class="col-lg-6 card-rekomendasi">
+                    <div
+                      class="img-rekomendasi"
+                      style="background-image: url('img/upload/akuakultur/<%= item.image %>');"
+                    ></div>
+                    <h6><%= item.title %></h6>
+                    <p style="text-align: justify; font-size: 14px; color: #007dab">
+                      <%= item.descripton %>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <% }) %>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#eduCarousel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#eduCarousel" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+          <!-- Carousel End -->
+
+          <!-- Informasi Penerapan Start -->
+          <div class="mt-5">
+            <h2 class="text-white">Cara Penerapan Teknologi Akuakultur</h2>
+
+            <div class="card mt-4">
+              <div class="card-body">
+                <h5 class="card-title">Kualitas Air</h5>
+                <ul class="card-text">
+                  <li><strong>Persiapkan Instalasi:</strong> Bangun kolam atau tangki dengan kapasitas yang sesuai, dilengkapi biofilter untuk menyaring limbah dan menjaga kualitas air.</li>
+                  <li><strong>Pasang Sistem Sirkulasi Air:</strong> Gunakan pompa dan pipa untuk sirkulasi air yang terhubung ke filter mekanik dan biologis.</li>
+                  <li><strong>Pantau Parameter Air:</strong> Periksa secara rutin suhu, oksigen terlarut, dan pH air menggunakan alat pemantauan digital.</li>
+                  <li><strong>Pemeliharaan:</strong> Bersihkan filter secara berkala dan ganti media filter bila diperlukan.</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="card mt-4">
+              <div class="card-body">
+                <h5 class="card-title">Teknologi Bioflok</h5>
+                <ul class="card-text">
+                  <li><strong>Keseimbangan Rasio C/N:</strong> Tambahkan sumber karbon (seperti molase) ke dalam air untuk menjaga rasio karbon-nitrogen sekitar 15:1.</li>
+                  <li><strong>Aerasi yang Konstan:</strong> Pasang aerator untuk menjaga flok tetap tersuspensi dalam air dan mendukung proses aerobik.</li>
+                  <li><strong>Pemantauan:</strong> Periksa kualitas air, termasuk kadar oksigen dan amonia, secara rutin.</li>
+                  <li><strong>Pakan Tambahan:</strong> Kombinasikan bioflok dengan pakan berkualitas untuk hasil maksimal.</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="card mt-4">
+              <div class="card-body">
+                <h5 class="card-title">Pakan</h5>
+                <ul class="card-text">
+                  <li><strong>Identifikasi Spesies:</strong> Pilih spesies dari tingkat trofik yang berbeda, seperti ikan pemakan pakan buatan, rumput laut, dan kerang penyaring.</li>
+                  <li><strong>Desain Sistem:</strong> Atur lokasi budidaya agar spesies dapat saling memanfaatkan limbah sebagai nutrisi.</li>
+                  <li><strong>Pantau Keseimbangan:</strong> Periksa keberlanjutan interaksi antar spesies untuk menjaga ekosistem.</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="card mt-4">
+              <div class="card-body">
+                <h5 class="card-title">Keramba Jaring Apung</h5>
+                <ul class="card-text">
+                  <li><strong>Pemilihan Lokasi:</strong> Pilih perairan dengan arus yang stabil dan aman dari polusi.</li>
+                  <li><strong>Pemasangan Struktur:</strong> Bangun keramba dengan jaring yang sesuai untuk jenis ikan yang dibudidayakan.</li>
+                  <li><strong>Pemantauan Rutin:</strong> Periksa kekuatan struktur, kebersihan jaring, dan kondisi ikan secara berkala.</li>
+                  <li><strong>Manajemen Pakan:</strong> Berikan pakan sesuai kebutuhan ikan tanpa berlebihan untuk mencegah pencemaran air.</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="card mt-4">
+              <div class="card-body">
+                <h5 class="card-title">Polikultur Laut</h5>
+                <ul class="card-text">
+                  <li><strong>Laboratorium Kultur Jaringan:</strong> Kembangkan bibit dari jaringan rumput laut induk di laboratorium steril.</li>
+                  <li><strong>Transfer ke Lapangan:</strong> Bibit hasil kultur dipindahkan ke area budidaya, seperti keramba.</li>
+                  <li><strong>Pemeliharaan:</strong> Pantau pertumbuhan rumput laut dan pastikan tidak ada kontaminasi.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- Informasi Penerapan End -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

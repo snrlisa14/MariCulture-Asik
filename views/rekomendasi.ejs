@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pembukuan</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <%- include('partials/navbar') %>
+    <div class="wrap-none p-4">
+      <div class="container-fluid">
+        <h1 class="text-center mb-4">List Pembukuan Nelayan</h1>
+
+        <table id="budidayaTable" class="table table-bordered table-striped">
+          <thead>
+            <tr style="background-color: #007bff; color: white;">
+              <th>Tahun</th>
+              <th>Provinsi</th>
+              <th>Jenis Usaha</th>
+              <th>Jenis Kegiatan</th>
+              <th>Total (Orang)</th>
+              <th>Luas Lahan Budidaya (m²)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% const data = [
+              { tahun: 2023, provinsi: "DKI JAKARTA", jenisUsaha: "BUDIDAYA PEMBESARAN", jenisKegiatan: "Jaring Apung Laut", total: 260, luas: 9000 },
+              { tahun: 2022, provinsi: "DKI JAKARTA", jenisUsaha: "BUDIDAYA PEMBESARAN", jenisKegiatan: "Jaring Apung Laut", total: 260, luas: 11000 },
+              { tahun: 2021, provinsi: "DKI JAKARTA", jenisUsaha: "BUDIDAYA PEMBESARAN", jenisKegiatan: "Jaring Apung Laut", total: 258, luas: 7400 },
+              { tahun: 2020, provinsi: "DKI JAKARTA", jenisUsaha: "BUDIDAYA PEMBESARAN", jenisKegiatan: "Jaring Apung Laut", total: 350, luas: 144 },
+              { tahun: 2019, provinsi: "DKI JAKARTA", jenisUsaha: "BUDIDAYA PEMBESARAN", jenisKegiatan: "Jaring Apung Laut", total: 380, luas: 9125 },
+              { tahun: 2018, provinsi: "DKI JAKARTA", jenisUsaha: "BUDIDAYA PEMBESARAN", jenisKegiatan: "Jaring Apung Laut", total: 410, luas: 10000 },
+              { tahun: 2017, provinsi: "DKI JAKARTA", jenisUsaha: "BUDIDAYA PEMBESARAN", jenisKegiatan: "Jaring Apung Laut", total: 450, luas: 12500 },
+              { tahun: 2016, provinsi: "DKI JAKARTA", jenisUsaha: "BUDIDAYA PEMBESARAN", jenisKegiatan: "Jaring Apung Laut", total: 500, luas: 15000 },
+              { tahun: 2015, provinsi: "DKI JAKARTA", jenisUsaha: "BUDIDAYA PEMBESARAN", jenisKegiatan: "Jaring Apung Laut", total: 520, luas: 18000 },
+              { tahun: 2014, provinsi: "DKI JAKARTA", jenisUsaha: "BUDIDAYA PEMBESARAN", jenisKegiatan: "Jaring Apung Laut", total: 550, luas: 20000 }
+            ]; %>
+            <% data.forEach((entry) => { %>
+            <tr>
+              <td><%= entry.tahun %></td>
+              <td><%= entry.provinsi %></td>
+              <td><%= entry.jenisUsaha %></td>
+              <td><%= entry.jenisKegiatan %></td>
+              <td><%= entry.total %></td>
+              <td><%= entry.luas %></td>
+            </tr>
+            <% }); %>
+          </tbody>
+        </table>
+        
+    </div>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

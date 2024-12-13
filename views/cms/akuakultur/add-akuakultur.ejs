@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Dashboard Edukasi</title>
+
+    <!-- Google Font: Source Sans Pro -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback"
+    />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="/plugins/fontawesome-free/css/all.min.css" />
+    <!-- Theme style -->
+    <link rel="stylesheet" href="/css/cms/adminlte/adminlte.min.css" />
+    <link rel="stylesheet" href="/css/cms/dashboard.css" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap4.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+  <body class="hold-transition sidebar-mini layout-fixed">
+    <div class="wrapper">
+      <!-- Navbar -->
+      <%- include('../../partials/cms/nav') %>
+      <!-- /.navbar -->
+
+      <!-- Main Sidebar Container -->
+      <%- include('../../partials/cms/aside') %>
+
+      <!-- Content -->
+      <div class="content-wrapper">
+        <!-- Content Header (Page header) -->
+        <div class="content-header">
+          <div class="container-fluid">
+            <div class="row mb-2">
+              <div class="col-sm-6">
+                <h1 class="m-0">Tambah</h1>
+              </div>
+              <!-- /.col -->
+              <div class="col-sm-6"></div>
+              <!-- /.col -->
+            </div>
+            <!-- /.row -->
+          </div>
+          <!-- /.container-fluid -->
+        </div>
+        <!-- Main content -->
+        <form
+          action="/add-akuakultur"
+          method="post"
+          enctype="multipart/form-data"
+        >
+          <section class="content">
+            <div
+              class="container-fluid"
+              style="
+                background-color: white;
+                border-top: 2px solid #7f7f7f;
+                padding-bottom: 15px;
+              "
+            >
+              <!-- Small boxes (Stat box) -->
+              <div class="row p-3">
+                <div
+                  class="col-lg-12 mt-3"
+                  style="
+                    border-radius: 3px;
+                    border: 3px solid #3c8dbc;
+                    padding: 10px;
+                  "
+                >
+                  <div class="tab-content" id="categoryTabsContent">
+                    <div
+                      class="tab-pane fade show active"
+                      id="content"
+                      role="tabpanel"
+                      aria-labelledby="content-tab"
+                    >
+                      <div class="form-group mt-3">
+                        <label for="categoryName"
+                          >Title <span style="color: red">*</span></label
+                        >
+                        <input
+                          type="text"
+                          value=""
+                          required
+                          autocomplete="off"
+                          class="form-control"
+                          id="categoryName"
+                          name="title"
+                        />
+                      </div>
+
+                      <!-- Tambahkan textarea untuk deskripsi -->
+                      <div class="form-group mt-3">
+                        <label for="description"
+                          >Description <span style="color: red">*</span></label
+                        >
+                        <textarea
+                          class="form-control"
+                          id="description"
+                          name="descripton"
+                          rows="4"
+                          required
+                        ></textarea>
+                        <!-- Mengambil deskripsi yang sudah ada -->
+                      </div>
+
+                      </div>
+
+                      <!-- New Image Upload -->
+                      <div class="form-group mt-3">
+                        <label for="image">Upload New Image</label>
+                        <input
+                          type="file"
+                          class="form-control"
+                          id="image"
+                          name="image"
+                        />
+                      </div>
+
+                      <button type="submit" class="mt-3 btn btn-success">
+                        Save
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </form>
+
+        <!-- /.content -->
+      </div>
+
+      <!-- Control Sidebar -->
+      <aside class="control-sidebar control-sidebar-dark">
+        <!-- Control sidebar content goes here -->
+      </aside>
+      <!-- /.control-sidebar -->
+    </div>
+
+    <!-- Scripts -->
+    <script src="/plugins/jquery/jquery.min.js"></script>
+    <script src="/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <script>
+      $.widget.bridge("uibutton", $.ui.button);
+    </script>
+    <script src="/dist/js/adminlte.js"></script>
+    <script src="/dist/js/pages/dashboard.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap4.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("#example").DataTable();
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,131 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id         Int      @id @default(autoincrement())
+  name       String
+  username   String   @unique
+  email      String   @unique
+  password   String
+  created_at DateTime @default(now()) @db.Timestamp
+  
+  @@map("user")
+}
+
+model CategoryRecommend {
+  id   Int    @id @default(autoincrement())
+  name String
+
+  recommendations Recommendation[]
+  
+  @@map("category_recommend")
+}
+
+model Recommendation {
+  id          Int                @id @default(autoincrement())
+  category_id Int
+  image       String?
+  title       String
+  descripton  String
+  link        String?
+
+  category CategoryRecommend @relation(fields: [category_id], references: [id])
+  
+  @@map("recommendation")
+}
+
+model Akuakultur {
+  id         Int     @id @default(autoincrement())
+  image      String?
+  title      String
+  descripton String
+  
+  @@map("akuakultur")
+}
+
+model Health {
+  id         Int     @id @default(autoincrement())
+  image      String?
+  title      String
+  descripton String
+  link       String?
+  
+  @@map("health")
+}
+
+model Fish {
+  id                    Int                   @id @default(autoincrement())
+  name                  String
+
+  indicatorEnvironments IndicatorEnvironment[]
+  indicatorFoods        IndicatorFood[]
+
+  @@map("fish")
+}
+
+model IndicatorEnvironment {
+  id               Int     @id @default(autoincrement())
+  fish_id          Int
+  temperature_from Int
+  temperature_until Int
+  salinity_from    Int
+  salinity_until   Int
+  oxygen_from      Int
+  oxygen_until     Int
+
+  fish Fish @relation(fields: [fish_id], references: [id])
+  
+  @@map("indicator_environment")
+}
+
+model IndicatorFood {
+  id            Int    @id @default(autoincrement())
+  fish_id       Int
+  age_from      Int
+  age_until     Int
+  name          String
+
+  fish Fish @relation(fields: [fish_id], references: [id])
+  
+  @@map("indicator_food")
+}
+model Disease {
+  id          Int         @id @default(autoincrement())
+  name        String
+  description String
+  symptoms    Symptom[]
+  causes      Cause[]
+  treatments  Treatment[]
+  @@map("diseases")
+}
+
+model Symptom {
+  id          Int     @id @default(autoincrement())
+  disease_id   Int
+  symptom     String
+  disease     Disease @relation(fields: [disease_id], references: [id])
+  @@map("symptoms")
+}
+
+model Cause {
+  id          Int     @id @default(autoincrement())
+  disease_id   Int
+  cause       String
+  disease     Disease @relation(fields: [disease_id], references: [id])
+  @@map("causes")
+}
+
+model Treatment {
+  id          Int     @id @default(autoincrement())
+  disease_id   Int
+  treatment   String
+  disease     Disease @relation(fields: [disease_id], references: [id])
+  @@map("treatments")
+}
+

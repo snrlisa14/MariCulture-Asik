@@ -1,0 +1,210 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.wrap-body {
+  height: 120vh;
+  width: 100%;
+  background-image: url("https://media.giphy.com/media/VuRUJf0vc7uXYL0YeC/giphy.gif?cid=790b7611if3mlb62pzmwx4ux2p3vohocuk1mcyq1ygygz6yf&ep=v1_gifs_search&rid=giphy.gif&ct=gttps://media.giphy.com/media/12ffdI8DuUi2RO/giphy.gif?cid=790b7611if3mlb62pzmwx4ux2p3vohocuk1mcyq1ygygz6yf&ep=v1_gifs_search&rid=giphy.gif&ct=g://media.giphy.com/media/oOrRt0rIDNtPa/giphy.gif?cid=790b7611znpubldwa8mvr6olw7ge28348ntx5whtcjosn80r&ep=v1_gifs_search&rid=giphy.gif&ct=g://media.giphy.com/media/vDQlLWAEsfs5i/giphy.gif?cid=ecf05e47drwi85g9hpt00gigh3unm1pua39l9bcut9amh00k&ep=v1_gifs_search&rid=giphy.gif&ct=g");
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+.wrap-body-auth {
+  height: 120vh;
+  width: 100%;
+  background-image: url("https://media.giphy.com/media/lclzyEBv8PuEaynWXC/giphy.gif?cid=ecf05e47ejrb1m1poblsy6hoxmz9s4xo1p93zww4flsz98dr&ep=v1_gifs_related&rid=giphy.gif&ct=g");
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  display: flex;
+}
+.wrap-body-login {
+  height: 120vh;
+  width: 100%;
+  background-image: url("https://media.giphy.com/media/lMZrblc3osP14VDywq/giphy.gif?cid=ecf05e47ejrb1m1poblsy6hoxmz9s4xo1p93zww4flsz98dr&ep=v1_gifs_related&rid=giphy.gif&ct=g");
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  display: flex;
+}
+
+.wrap-none {
+  width: 100%;
+  background-color: #46a2c3;
+  position: relative;
+  display: flex;
+  padding-bottom: 110px !important;
+}
+
+.wrap-hero {
+  margin: auto;
+  text-align: center;
+  color: #ffffff;
+  z-index: 999 !important;
+  padding-top: 80px;
+}
+.nav-link {
+  color: white !important;
+  font-weight: 600;
+  font-size: 20px;
+  margin-right: 25px;
+}
+
+.navbar-brand {
+  color: white !important;
+  font-size: 23px;
+  font-weight: 700;
+}
+
+.wrap-hero h3 {
+  font-size: 36px;
+  font-weight: 600;
+}
+.wrap-hero h1 {
+  font-size: 120px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+.wrap-hero h4 {
+  font-size: 300;
+  font-style: italic;
+  margin-bottom: 50px;
+  text-align: center;
+  background-position: center;
+}
+
+.wrap-hero a {
+  background-color: #4bcefe;
+  width: 175px;
+  height: 55px;
+  border-radius: 15px;
+  text-align: center;
+  padding-top: 10px;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.register-container {
+  background-color: #fff;
+  padding: 45px;
+  border-radius: 10px;
+  margin-bottom: 40px;
+}
+
+.wrap-register {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  width: 100%;
+  margin: auto;
+}
+.about-container {
+  background-color: #fff;
+  padding: 45px;
+  border-radius: 50px;
+  margin-bottom: 40px;
+  width: 80%;
+  margin: auto;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.wrap-register button {
+  width: 200px !important;
+  height: 50px;
+  font-size: 20px;
+  font-weight: 700;
+  background-color: #4bcefe;
+  border: none !important;
+  box-shadow: rgba(255, 255, 255, 0.35) 0px 5px 15px !important;
+}
+.button-blue {
+  width: 200px !important;
+  height: 50px;
+  font-size: 20px;
+  font-weight: 700;
+  background-color: #4bcefe;
+  border: none !important;
+}
+.button-blue:hover {
+  background-color: #4bcefe;
+}
+.form-control {
+  background-color: #e0e0e0;
+  border: none;
+  height: 50px;
+  margin-bottom: 30px;
+}
+.form-control::placeholder {
+  font-weight: 500;
+}
+.form-title {
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.card-kesehatan {
+  width: 355px;
+  padding-bottom: 5px;
+  background-color: #ffffff;
+  border-radius: 50px;
+  padding: 30px;
+  text-align: center;
+  align-items: center;
+}
+
+.img-kesehatan {
+  width: 100%;
+  height: 240px;
+  background-position: center;
+  background-size: cover;
+  border-radius: 25px;
+}
+
+.card-kesehatan h4 {
+  margin-top: 15px;
+  color: #007dab !important;
+  font-size: 22px;
+}
+
+.card-rekomendasi {
+  width: 300px;
+  padding-bottom: 5px;
+  background-color: #ffffff;
+  border-radius: 50px;
+  padding: 30px;
+  text-align: center;
+  align-items: center;
+}
+.card-rekomendasi h6 {
+  margin-top: 15px;
+  color: #007dab !important;
+  font-size: 18px;
+}
+.img-rekomendasi {
+  width: 100%;
+  height: 200px;
+  background-position: center;
+  background-size: cover;
+  border-radius: 25px;
+}
+.card-rekomendasi a {
+  width: 170px !important;
+  height: 45px;
+  font-size: 20px;
+  font-weight: 700;
+  background-color: #337a94;
+  border: none !important;
+  box-shadow: rgba(255, 255, 255, 0.35) 0px 5px 15px !important;
+  margin-top: 20px;
+}
+
+.banner {
+  width: 100%;
+  height: 320px;
+  background-position: center;
+  background-size: cover;
+}

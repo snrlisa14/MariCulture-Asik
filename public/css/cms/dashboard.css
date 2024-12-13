@@ -1,0 +1,55 @@
+* {
+    font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial,
+        sans-serif;
+}
+.edit {
+    padding: 5px 11px;
+    border-radius: 4px;
+    background-color: #3c8dbc;
+    color: white;
+    text-decoration: none;
+    margin-right: 10px;
+}
+.delete {
+    padding: 5px 11px;
+    border-radius: 4px;
+    background-color: #bc3c3c;
+    color: white;
+    text-decoration: none;
+}
+.add {
+    padding: 5px 11px;
+    border-radius: 4px;
+    background-color: #3cbc60;
+    color: white;
+    text-decoration: none;
+    margin-right: 10px;
+    margin-bottom: 20px;
+}
+
+.add:hover {
+    color: white !important;
+    text-decoration: none;
+}
+.edit:hover {
+    color: white !important;
+    text-decoration: none;
+}
+.delete:hover {
+    color: white !important;
+    text-decoration: none;
+}
+
+.path a {
+    color: black;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.path {
+    margin-right: 10px;
+}
+
+.path a:hover {
+    text-decoration: none;
+    color: black;
+}
